@@ -13,6 +13,13 @@ namespace Talabat.Core.Specifications
         public Expression<Func<T, bool>> Criteria { get; set; }
         public List<Expression<Func<T , Object>>> Include {  get; set; }
 
-        
+        public Expression<Func<T, Object>> OrderBy { get; set; }
+
+        public Expression<Func<T, Object>> OrderByDescending { get; set; }
+
+        public int Skip { get; set; }
+        public int Take { get; set; }
+        public bool IsPaginationEnabled { get; set; }
+
     }
 }
